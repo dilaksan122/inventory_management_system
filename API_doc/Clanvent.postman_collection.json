@@ -1,0 +1,1990 @@
+{
+	"info": {
+		"_postman_id": "e4c2c9c6-4364-4dce-8e19-9e72cdc83d26",
+		"name": "Clanvent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25142351"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "Get login user data",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/login_user/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"login_user",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Jon snow",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "admin@app.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "01985986986",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "role",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"description": "active/inactive",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/profile-update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"profile-update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Roles",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/roles",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@app.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Home",
+					"item": [
+						{
+							"name": "Home Page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/home-page",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"home-page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Top Products",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/top-product?week=2022-12-25",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"top-product"
+									],
+									"query": [
+										{
+											"key": "week",
+											"value": "2022-12-25"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sale Chart Data",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/sale-chart-data",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"sale-chart-data"
+									],
+									"query": [
+										{
+											"key": "from_date",
+											"value": "2022-12-01",
+											"disabled": true
+										},
+										{
+											"key": "to_date",
+											"value": "2022-12-31",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Product List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/product-list?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"product-list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Stock And Warehouse Wise Product List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/stock-wise-products?warehouse=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"stock-wise-products"
+									],
+									"query": [
+										{
+											"key": "warehouse",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Purchase",
+					"item": [
+						{
+							"name": "Purchase List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/purchase-list?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"purchase-list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Invoice",
+					"item": [
+						{
+							"name": "Invoice List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/invoice-list?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"invoice-list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invoice Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/invoice-details/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"invoice-details",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invoice Details Download",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/invoice-download/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"invoice-download",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sale Return",
+					"item": [
+						{
+							"name": "Sale Return",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/sale-return-list?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"sale-return-list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sale Return requests",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/sale-return-requests?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"sale-return-requests"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Report",
+					"item": [
+						{
+							"name": "Expense Report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/expense-report?from_date=2023-01-03&to_date=2023-02-23",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"expense-report"
+									],
+									"query": [
+										{
+											"key": "from_date",
+											"value": "2023-01-03"
+										},
+										{
+											"key": "to_date",
+											"value": "2023-02-23"
+										},
+										{
+											"key": "q",
+											"value": "all-time",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sale report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/sale-report?warehouse=1&q=all-time&from_date=2023-01-01&to_date=2023-01-07",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"sale-report"
+									],
+									"query": [
+										{
+											"key": "warehouse",
+											"value": "1"
+										},
+										{
+											"key": "q",
+											"value": "all-time"
+										},
+										{
+											"key": "from_date",
+											"value": "2023-01-01"
+										},
+										{
+											"key": "to_date",
+											"value": "2023-01-07"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Purchase Report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/purchase-report?q=all-time",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"purchase-report"
+									],
+									"query": [
+										{
+											"key": "warehouse",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "from_date",
+											"value": "2022-12-01",
+											"disabled": true
+										},
+										{
+											"key": "to_date",
+											"value": "2023-01-04",
+											"disabled": true
+										},
+										{
+											"key": "q",
+											"value": "all-time"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Payment Report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/payment-report?q=all-time",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"payment-report"
+									],
+									"query": [
+										{
+											"key": "warehouse",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "from_date",
+											"value": "2023-01-01",
+											"disabled": true
+										},
+										{
+											"key": "to_date",
+											"value": "2023-01-31",
+											"disabled": true
+										},
+										{
+											"key": "q",
+											"value": "all-time"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Warehouse Stock Report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/warehouse-stock-report",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"warehouse-stock-report"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Warehouse Stock Report Copy",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/loss-profit-report?q=all-time&warehouse=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"loss-profit-report"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "all-time"
+										},
+										{
+											"key": "warehouse",
+											"value": "1"
+										},
+										{
+											"key": "from_date",
+											"value": "2022-12-01",
+											"disabled": true
+										},
+										{
+											"key": "to_date",
+											"value": "2023-01-07",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "customer@app.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "Get login user data",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/login_user/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"login_user",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "snow",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "customer@app.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "019876543211",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "Itclan",
+											"type": "text"
+										},
+										{
+											"key": "designation",
+											"value": "Developer",
+											"type": "text"
+										},
+										{
+											"key": "address_line_1",
+											"value": "dhanmondi 32, dhaka bangladesh",
+											"type": "text"
+										},
+										{
+											"key": "address_line_2",
+											"value": "dhanmondi 32, dhaka bangladesh",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "42",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "5910",
+											"type": "text"
+										},
+										{
+											"key": "zipcode",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "short_address",
+											"value": "Danmondi",
+											"type": "text"
+										},
+										{
+											"key": "billing_same",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "b_first_name",
+											"value": "Zahid",
+											"type": "text"
+										},
+										{
+											"key": "b_last_name",
+											"value": "Shaikot",
+											"type": "text"
+										},
+										{
+											"key": "b_email",
+											"value": "z@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "b_phone",
+											"value": "01987654321",
+											"type": "text"
+										},
+										{
+											"key": "b_address_line_1",
+											"value": "Dhanmondi 32, Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "b_address_line_2",
+											"value": "Dhanmondi 32, Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "b_country",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "b_state",
+											"value": "42",
+											"type": "text"
+										},
+										{
+											"key": "b_city",
+											"value": "5910",
+											"type": "text"
+										},
+										{
+											"key": "b_zipcode",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "b_short_address",
+											"value": "Dhanmondi 32 , Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"description": "active/inactive",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/profile-update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"profile-update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Home",
+					"item": [
+						{
+							"name": "Home page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/home-page",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"home-page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Top Products",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/top-product?year=2022",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"top-product"
+									],
+									"query": [
+										{
+											"key": "week",
+											"value": "2022-12-25",
+											"disabled": true
+										},
+										{
+											"key": "month",
+											"value": "2022-12",
+											"disabled": true
+										},
+										{
+											"key": "year",
+											"value": "2022"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Invoice",
+					"item": [
+						{
+							"name": "Invoice List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/invoice-list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"invoice-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invoice Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "warehouse_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "payment_type",
+											"value": "online",
+											"description": "online",
+											"type": "text"
+										},
+										{
+											"key": "is_walkin_customer",
+											"value": "0",
+											"description": "boolean",
+											"type": "text"
+										},
+										{
+											"key": "walkin_customer[full_name]",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "walkin_customer[phone]",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "date",
+											"value": "2023-01-04",
+											"type": "text"
+										},
+										{
+											"key": "bank_info[ac_no]",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "bank_info[t_no]",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "bank_info[date]",
+											"value": " ",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "due_date",
+											"value": "2023-01-04",
+											"type": "text"
+										},
+										{
+											"key": "customer_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "billing[name]",
+											"value": "Zahid Shaikot",
+											"type": "text"
+										},
+										{
+											"key": "billing[email]",
+											"value": "zahidhassanshaikot@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "billing[phone]",
+											"value": "01985986986",
+											"type": "text"
+										},
+										{
+											"key": "billing[address_line_1]",
+											"value": "Dhanmondi 32, Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "billing[address_line_2]",
+											"value": "Dhanmondi 32, Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "billing[city]",
+											"value": "Uttora",
+											"type": "text"
+										},
+										{
+											"key": "billing[state]",
+											"value": "Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "billing[zip]",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "billing[country]",
+											"value": "Bangladesh",
+											"type": "text"
+										},
+										{
+											"key": "shipping[name]",
+											"value": "Zahid Hassan",
+											"type": "text"
+										},
+										{
+											"key": "shipping[email]",
+											"value": "zahidhassanshaikot@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "shipping[phone]",
+											"value": "01985986986",
+											"type": "text"
+										},
+										{
+											"key": "shipping[address_line_1]",
+											"value": "Dhanmondi 32, Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "shipping[address_line_2]",
+											"value": "Dhanmondi 32, Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "shipping[city]",
+											"value": "Uttora",
+											"type": "text"
+										},
+										{
+											"key": "shipping[state]",
+											"value": "Dhaka",
+											"type": "text"
+										},
+										{
+											"key": "shipping[zip]",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "shipping[country]",
+											"value": "Bangladesh",
+											"type": "text"
+										},
+										{
+											"key": "items[0][id]",
+											"value": "35",
+											"type": "text"
+										},
+										{
+											"key": "items[0][attribute][id]",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "items[0][attribute][name]",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "items[0][attribute_item][id]",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "items[0][attribute_item][name]",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "items[0][is_variant]",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "items[0][product_id]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "items[0][split_sale]",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "items[0][sku]",
+											"value": "199743064_BD-1146887721qqw",
+											"type": "text"
+										},
+										{
+											"key": "items[0][name]",
+											"value": "Demo Produce one",
+											"type": "text"
+										},
+										{
+											"key": "items[0][price]",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "items[0][stock]",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "items[0][quantity]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "items[0][tax_status]",
+											"value": "included",
+											"type": "text"
+										},
+										{
+											"key": "items[0][custom_tax]",
+											"value": "2.000",
+											"type": "text"
+										},
+										{
+											"key": "items[0][discount]",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "items[0][discount_type]",
+											"value": "percent",
+											"description": "percent/fixed",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "notes",
+											"value": "Symple note",
+											"type": "text"
+										},
+										{
+											"key": "tax",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "discount",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "discount_type",
+											"value": "percent",
+											"type": "text"
+										},
+										{
+											"key": "total_paid",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/invoice-create",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"invoice-create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invoice Create Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json, text/plain, */*",
+										"type": "text"
+									},
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json;charset=UTF-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"warehouse_id\": 1,\r\n\t\"payment_type\": \"online\",\r\n\t\"date\": \"2023-01-05\",\r\n\t\"due_date\": \"2023-01-05\",\r\n\t\"customer_id\": 1,\r\n\t\"billing\":\r\n\t{\r\n\t\t\"name\": \"Zahid Shaikot\",\r\n\t\t\"email\": \"z@gmail.com\",\r\n\t\t\"phone\": \"01987654321\",\r\n\t\t\"address_line_1\": \"Dhanmondi 32, Dhaka\",\r\n\t\t\"address_line_2\": \"Dhanmondi 32, Dhaka\",\r\n\t\t\"city\": \"Dhaka\",\r\n\t\t\"state\": \"Dhaka\",\r\n\t\t\"zip\": \"12345\",\r\n\t\t\"country\": \"Bangladesh\"\r\n\t},\r\n\t\"shipping\":\r\n\t{\r\n\t\t\"name\": \"Zahid Shaikot\",\r\n\t\t\"email\": \"z@gmail.com\",\r\n\t\t\"phone\": \"01987654321\",\r\n\t\t\"address_line_1\": \"Dhanmondi 32, Dhaka\",\r\n\t\t\"address_line_2\": \"Dhanmondi 32, Dhaka\",\r\n\t\t\"city\": \"Dhaka\",\r\n\t\t\"state\": \"Dhaka\",\r\n\t\t\"zip\": \"12345\",\r\n\t\t\"country\": \"Bangladesh\"\r\n\t},\r\n\t\"items\": [\r\n\t{\r\n\t\t\"id\": 35,\r\n\t\t\"attribute\":\r\n\t\t{\r\n\t\t\t\"id\": null,\r\n\t\t\t\"name\": null\r\n\t\t},\r\n\t\t\"attribute_item\":\r\n\t\t{\r\n\t\t\t\"id\": null,\r\n\t\t\t\"name\": null\r\n\t\t},\r\n\t\t\"is_variant\": 0,\r\n\t\t\"product_id\": 2,\r\n\t\t\"split_sale\": null,\r\n\t\t\"sku\": \"199743064_BD-1146887721qqw\",\r\n\t\t\"name\": \"Demo Produce one\",\r\n\t\t\"price\": \"100\",\r\n\t\t\"stock\": 3,\r\n\t\t\"quantity\": 3,\r\n\t\t\"tax_status\": \"included\",\r\n\t\t\"custom_tax\": \"2.000\",\r\n\t\t\"discount\": 0,\r\n\t\t\"discount_type\": \"percent\"\r\n\t},\r\n\t{\r\n\t\t\"id\": 97,\r\n\t\t\"attribute\":\r\n\t\t{\r\n\t\t\t\"id\": 1,\r\n\t\t\t\"name\": \"Color\"\r\n\t\t},\r\n\t\t\"attribute_item\":\r\n\t\t{\r\n\t\t\t\"id\": 2,\r\n\t\t\t\"name\": \"Black\"\r\n\t\t},\r\n\t\t\"is_variant\": 1,\r\n\t\t\"product_id\": 10,\r\n\t\t\"split_sale\": 1,\r\n\t\t\"sku\": \"00000010\",\r\n\t\t\"name\": \"demo variant pp\",\r\n\t\t\"price\": 11,\r\n\t\t\"stock\": 11,\r\n\t\t\"quantity\": 3,\r\n\t\t\"tax_status\": \"included\",\r\n\t\t\"custom_tax\": \"10.000\",\r\n\t\t\"discount\": 0,\r\n\t\t\"discount_type\": \"percent\"\r\n\t},\r\n\t{\r\n\t\t\"id\": 94,\r\n\t\t\"attribute\":\r\n\t\t{\r\n\t\t\t\"id\": 2,\r\n\t\t\t\"name\": \"Size\"\r\n\t\t},\r\n\t\t\"attribute_item\":\r\n\t\t{\r\n\t\t\t\"id\": 5,\r\n\t\t\t\"name\": \"S\"\r\n\t\t},\r\n\t\t\"is_variant\": 1,\r\n\t\t\"product_id\": 10,\r\n\t\t\"split_sale\": 1,\r\n\t\t\"sku\": \"00000010\",\r\n\t\t\"name\": \"demo variant pp\",\r\n\t\t\"price\": 10,\r\n\t\t\"stock\": 9,\r\n\t\t\"quantity\": 2,\r\n\t\t\"tax_status\": \"included\",\r\n\t\t\"custom_tax\": \"10.000\",\r\n\t\t\"discount\": 0,\r\n\t\t\"discount_type\": \"percent\"\r\n\t}],\r\n\t\"notes\": null,\r\n\t\"tax\": 0,\r\n\t\"discount\": 0,\r\n\t\"discount_type\": \"percent\",\r\n\t\"total_paid\": 0\r\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/invoice-create",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"invoice-create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Draft Invoice List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/draft-invoice-list?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"draft-invoice-list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Draft Invoice details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/draft-invoice-details/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"draft-invoice-details",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invoice Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/invoice-details/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"invoice-details",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Invoice Details Download",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/invoice-download/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"invoice-download",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Invoice Return",
+					"item": [
+						{
+							"name": "Returnable Invoices",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/returnable-invoice-list?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"returnable-invoice-list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return requests",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/invoice-return-requests?page=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"invoice-return-requests"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Report",
+					"item": [
+						{
+							"name": "Purchase Report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/purchase-report?q=all-time",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"purchase-report"
+									],
+									"query": [
+										{
+											"key": "warehouse",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "from_date",
+											"value": "2022-12-01",
+											"disabled": true
+										},
+										{
+											"key": "to_date",
+											"value": "2023-01-04",
+											"disabled": true
+										},
+										{
+											"key": "q",
+											"value": "all-time"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Payment Report",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/customer/payment-report?warehouse=1&q=all-time",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"payment-report"
+									],
+									"query": [
+										{
+											"key": "warehouse",
+											"value": "1"
+										},
+										{
+											"key": "from_date",
+											"value": "2023-01-01",
+											"disabled": true
+										},
+										{
+											"key": "to_date",
+											"value": "2023-01-31",
+											"disabled": true
+										},
+										{
+											"key": "q",
+											"value": "all-time"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Stock And Warehouse Wise Product List Copy",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{bearer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/stock-wise-products?warehouse=2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"stock-wise-products"
+									],
+									"query": [
+										{
+											"key": "warehouse",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Common",
+			"item": [
+				{
+					"name": "Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/countries",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "State By Country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/states?country_id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"states"
+							],
+							"query": [
+								{
+									"key": "country_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cities By State",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cities?state_id=42",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cities"
+							],
+							"query": [
+								{
+									"key": "state_id",
+									"value": "42"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/settings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Warehouse",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{bearer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/warehouses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"warehouses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{bearer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Api-Key",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "123456",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://clanvent.dev/api/v100",
+			"type": "string"
+		},
+		{
+			"key": "bearer",
+			"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2xhbnZlbnQuZGV2XC9hcGlcL3YxMDBcL2FkbWluXC9sb2dpbiIsImlhdCI6MTY3MjgyOTk4MywiZXhwIjoxNjczNDM0NzgzLCJuYmYiOjE2NzI4Mjk5ODMsImp0aSI6IkhJN0lmMEs1bzUyWmxLeEEiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.odv0W7NeHCvhr8txrQ0VKe0QNv-HwK5bexE7qIOOL9o",
+			"type": "string"
+		}
+	]
+}

@@ -22,3 +22,4 @@ For Ready codecanyon production, prduction will run localhost/product_name
 10. 
 "# Invenotory-Management" 
 "# inventory_management_system" 
+"# Invenotory-Management-system" 

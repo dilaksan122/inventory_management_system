@@ -1,0 +1,460 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  margin: 0
+}
+
+main {
+  display: block
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+a {
+  background-color: transparent
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+
+b,
+strong {
+  font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+small {
+  font-size: 80%
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sub {
+  bottom: -.25em
+}
+
+sup {
+  top: -.5em
+}
+
+img {
+  border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
+}
+
+button,
+input {
+  overflow: visible
+}
+
+button,
+select {
+  text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText
+}
+
+fieldset {
+  padding: .37em .75em .625em
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal
+}
+
+progress {
+  vertical-align: baseline
+}
+
+textarea {
+  overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+}
+
+details {
+  display: block
+}
+
+summary {
+  display: list-item
+}
+
+template {
+  display: none
+}
+
+[hidden] {
+  display: none
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  color: $white;
+  font-size: 16px;
+  margin: 0;
+  color: $text-color;
+  background-color: #fff;
+  @include transition(all .3s ease-in-out);
+}
+a {
+  @include transition(all .2s linear);
+  &:hover{
+      color: $text-color;
+      text-decoration: none;
+  }
+}
+
+@media(max-width:300px) {
+  body {
+    overflow-x: scroll;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: $primary;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color:$primary;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color:$primary;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: $text-color;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h6.ic-lato-font {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+i{
+  font-size: 16px;
+}
+
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width:576px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (min-width:992px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+button:focus,
+.btn:focus {
+  outline: none;
+  @include box-shadow(none);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+// Mixin itself
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// Usage as a mixin
+.element {
+  @include clearfix;
+}
+
+@media (min-width: 1250px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+section{
+ > p{
+      a{
+          color: $hightlight-color;
+          &:hover{
+              color: $hightlight-color;
+          }
+      }
+  }
+  ul{
+      padding-left: 40px;
+  }
+  >p:not(:last-child){
+    margin-bottom: 16px;
+  }
+}
+
+pre {
+  display: block;
+  padding: 0;
+  margin: 35px 0 0;
+  font-size: 13px;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #fbfbfb;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 19px;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+  margin-top: 44px;
+}
+
+.ic-word-color{
+  color:$hightlight-color; 
+}
+.ic-pre-code{
+  color:#000;
+  background: rgba(150, 150, 150, 0.1);
+  padding: 22px;
+  margin-bottom: 0;
+}
+.mark, mark {
+  background-color: rgba(0,0,0, .05);
+  color: #EBAB53;
+  @include border-radius(4px);
+}
+.ic-body{
+  >p:not(:last-child){
+    margin-bottom: 16px;
+  }
+  img{
+    // margin-top: 15px;
+  }
+}
+
+.font-weight-600{
+  font-weight: 600;
+}
+
+.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea{
+  line-height: 1.2 !important;
+}
+
+.ic-body+h3 {
+  margin-top: 50px !important;
+}
+
+.mt-25{
+  margin-top: 25px;
+}
+
+.ic-btn{
+      text-align: center;
+      background-color: #607d8b;
+      color: #fff;
+      box-shadow: none;
+      padding: 4px 6px;
+      text-decoration: none;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      border-radius: 2px;
+      border: 0;
+      font-size: 13px;
+      outline: 0;
+      display: inline-block;
+      &.buttons-create {
+        background-color: #607d8b;
+        border: none !important;
+      }
+      &.buttons-csv {
+        background-color: #42ca7f;
+      }
+      &.buttons-excel {
+        background-color: #236C45;
+      }
+      &.buttons-pdf {
+        background-color: #AD0B00;
+      }
+      &.buttons-print {
+        background-color: #f8b425;
+      }
+      &.buttons-reload {
+        background-color: #9ca8b3;
+      }
+      span  {
+        color: #fff;
+        i{
+           margin-right: 8px;
+           font-size: 13px;
+        }
+       
+      }
+}
+
+.btn{
+  padding: 0.2rem 0.6rem;
+}
+.btn-primary {
+  background-color: #28aaa9;
+  border: 1px solid #28aaa9;
+
+  &:hover{
+    background-color: #239594;
+    border: 1px solid #239594;
+  }
+}
+
+.ic-code-structured{
+  padding: 20px 0px 0px 20px;
+}

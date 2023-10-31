@@ -1,0 +1,30 @@
+// Variables
+
+// Restated Bootstrap Variables
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+/*-----------------
+    @Typography
+-----------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+$primary: #28aaa9 !default;
+$text-color:#333334 !default;
+$hightlight-color: #28aaa9 !default;
+
+$laptop-device: "only screen and (max-width: 1499.98px) and (min-width: 1200px)";
+$desktop-device: "only screen and (max-width: 1199.98px) and (min-width: 992px)";
+$tablet-device: "only screen and (max-width: 991.98px) and (min-width: 768px)";
+$large-mobile: "only screen and (max-width: 767.98px)";
+$small-mobile: "only screen and (max-width: 575.98px)";
+$extra-small-mobile: "only screen and (max-width: 479px)";
